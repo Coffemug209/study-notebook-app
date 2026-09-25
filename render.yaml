@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: study-notebook-api
+    env: node
+    region: singapore
+    plan: free
+    rootDir: server
+    buildCommand: npm install && npm run build && npx prisma generate
+    startCommand: npm run start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: DATABASE_URL
+        sync: false
+      - key: DATABASE_URL_UNPOOLED
+        sync: false
+      - key: UPLOADTHING_TOKEN
+        sync: false
+      - key: CORS_ORIGIN
+        sync: false
