@@ -1,5 +1,5 @@
 import type { Request, Response, NextFunction } from 'express'
-import { Prisma } from '../generated/prisma/index.js'
+import { Prisma } from '@prisma/client'
 
 export class AppError extends Error {
   public statusCode: number

@@ -5,7 +5,7 @@ import {
   validateNoteTitle,
   validateTiptapContent,
 } from '../middleware/validate.js'
-import type { Prisma } from '../generated/prisma/index.js'
+import type { Prisma } from '@prisma/client'
 
 export class NoteService {
   static async getNotesBySubject(subjectId: string) {
