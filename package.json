@@ -2,6 +2,10 @@
   "name": "study-notebook-app",
   "private": true,
   "version": "1.0.0",
+  "workspaces": [
+    "server",
+    "client"
+  ],
   "scripts": {
     "dev:client": "npm --prefix client run dev",
     "dev:server": "npm --prefix server run dev",
